@@ -61,7 +61,10 @@ struct ContentView: View {
                 }
                 Section{
                     Text((checkAmount + checkAmount/100 * Double(tipPercentage)), format: dollarFormat)
-                }header: {
+                        .foregroundColor(tipPercentage == 0 ? .red : .black)
+                }
+                
+            header: {
                     Text("The original amount and the tip value")
                 }
             }
